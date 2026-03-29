@@ -22,15 +22,22 @@
       transition: text-shadow 0.3s ease;
     }
     
-    /* Мягкое белое свечение для нижнего блока OOC (весь текст кроме жирного заголовка) */
+    /* Мягкое белое свечение для нижнего блока OOC (только для обычного текста, не для b) */
+    .ooc-box:hover p:not(:has(b)) {
+      text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+      transition: text-shadow 0.3s ease;
+    }
+    
+    /* Более простой и надёжный способ - свечение применяем ко всему p, но для b явно убираем */
     .ooc-box:hover p {
       text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
       transition: text-shadow 0.3s ease;
     }
     
-    /* Отменяем свечение для жирного текста внутри OOC блока */
-    .ooc-box:hover p b {
-      text-shadow: none;
+    /* Жирный текст НИКОГДА не получает свечение - даже при наведении и при убирании курсора */
+    .ooc-box p b {
+      text-shadow: none !important;
+      transition: none !important;
     }
     
     /* Плавный переход для текста */
