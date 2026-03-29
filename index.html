@@ -39,10 +39,16 @@
       transition: text-shadow 0.3s ease;
     }
     
-    /* Стили для левой картинки в едином стиле с блоками */
+    /* Делаем info-box позиционированным относително */
+    .info-box {
+      position: relative;
+      margin-left: 220px; /* Отступ для картинки слева */
+    }
+    
+    /* Стили для левой картинки - привязываем к info-box */
     .left-image {
-      position: fixed;
-      left: 20px;
+      position: absolute;
+      left: -200px; /* Сдвигаем влево от info-box */
       top: 50%;
       transform: translateY(-50%);
       z-index: 100;
@@ -68,21 +74,19 @@
     
     /* Адаптация для мобильных устройств */
     @media (max-width: 768px) {
+      .info-box {
+        margin-left: 140px;
+      }
       .left-image img {
         width: 120px;
       }
       .left-image {
-        left: 10px;
+        left: -130px;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- 🖼️ Левая картинка с рамкой в едином стиле -->
-  <div class="left-image">
-    <img src="https://i.pinimg.com/1200x/94/5d/0b/945d0b337229f990997efcf40a9ee130.jpg" alt="Left decorative image">
-  </div>
 
   <!-- 🎧 Фоновая музыка -->
   <audio autoplay loop muted id="bg-music">
@@ -91,6 +95,11 @@
 
   <!-- Основной блок информации -->
   <div class="info-box">
+    <!-- 🖼️ Левая картинка - теперь внутри info-box -->
+    <div class="left-image">
+      <img src="https://i.pinimg.com/1200x/94/5d/0b/945d0b337229f990997efcf40a9ee130.jpg" alt="Left decorative image">
+    </div>
+    
     <div class="scroller-padding" id="col">
       <img src="https://i.pinimg.com/736x/ae/68/54/ae6854765bff999fcdb1b8fe3113107b.jpg" class="main-img" alt="Avatar">
 
