@@ -14,7 +14,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Дополнительные стили для мягкого белого свечения текста -->
+  <!-- Дополнительные стили для мягкого белого свечения текста и левой картинки -->
   <style>
     /* Мягкое белое свечение текста при наведении на скролл-бокс */
     .col:hover p {
@@ -23,18 +23,12 @@
     }
     
     /* Мягкое белое свечение для нижнего блока OOC (только для обычного текста, не для b) */
-    .ooc-box:hover p:not(:has(b)) {
-      text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
-      transition: text-shadow 0.3s ease;
-    }
-    
-    /* Более простой и надёжный способ - свечение применяем ко всему p, но для b явно убираем */
     .ooc-box:hover p {
       text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
       transition: text-shadow 0.3s ease;
     }
     
-    /* Жирный текст НИКОГДА не получает свечение - даже при наведении и при убирании курсора */
+    /* Жирный текст НИКОГДА не получает свечение */
     .ooc-box p b {
       text-shadow: none !important;
       transition: none !important;
@@ -44,9 +38,49 @@
     .col p, .ooc-box p {
       transition: text-shadow 0.3s ease;
     }
+    
+    /* Стили для левой картинки с рамкой */
+    .left-image {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+    }
+    
+    .left-image img {
+      width: 200px;
+      height: auto;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    /* Эффект при наведении на картинку */
+    .left-image img:hover {
+      border-color: #ff69b4;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+      transform: scale(1.05);
+    }
+    
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+      .left-image img {
+        width: 120px;
+      }
+      .left-image {
+        left: 10px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- 🖼️ Левая картинка с рамкой -->
+  <div class="left-image">
+    <img src="https://i.pinimg.com/1200x/94/5d/0b/945d0b337229f990997efcf40a9ee130.jpg" alt="Left decorative image">
+  </div>
 
   <!-- 🎧 Фоновая музыка -->
   <audio autoplay loop muted id="bg-music">
