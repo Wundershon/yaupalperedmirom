@@ -21,10 +21,10 @@
     <source src="https://raw.githubusercontent.com/username/repo/main/music/4_Pozicii_Bruno_-_Vesna_(SkySound.cc).mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Основной блок -->
+  <!-- Основной блок информации -->
   <div class="info-box">
     <div class="scroller-padding" id="col">
-      <img src="https://i.pinimg.com/736x/ae/68/54/ae6854765bff999fcdb1b8fe3113107b.jpg" class="main-img">
+      <img src="https://i.pinimg.com/736x/ae/68/54/ae6854765bff999fcdb1b8fe3113107b.jpg" class="main-img" alt="Avatar">
 
       <span class="profile-info">
         <b>Имя:</b><span class="value">Лулу/Олег-Панацея/Шизойд</span><br>
@@ -35,7 +35,7 @@
         <b>Ориентация:</b><span class="value">БиСексуал.</span><br>
       </span>
 
-      <img src="https://i.pinimg.com/originals/fe/e3/f1/fee3f12758f782be4a589572b43b82cd.gif" class="static-gif">
+      <img src="https://i.pinimg.com/originals/fe/e3/f1/fee3f12758f782be4a589572b43b82cd.gif" class="static-gif" alt="GIF">
     </div>
 
     <div class="col">
@@ -49,7 +49,7 @@
     </div>
   </div>
 
-  <!-- Нижний блок -->
+  <!-- Нижний блок OOC -->
   <div class="ooc-box">
     <p class="scroller-padding" id="line-spacing">
       <b> Суицид Выход! Не мучай себя!</b><br><br>
@@ -57,12 +57,12 @@
     </p>
   </div>
 
-  <!-- 🔊 Включение звука после клика -->
+  <!-- 🔊 Включение звука после клика (требуется браузерами) -->
   <script>
     document.addEventListener('click', function () {
       const audio = document.getElementById('bg-music');
       audio.muted = false;
-      audio.volume = 0.3;
+      audio.volume = 0.3; // регулируем громкость
       audio.play();
     }, { once: true });
   </script>
