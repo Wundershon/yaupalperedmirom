@@ -22,10 +22,15 @@
       transition: text-shadow 0.3s ease;
     }
     
-    /* Мягкое белое свечение для нижнего блока OOC */
+    /* Мягкое белое свечение для нижнего блока OOC (весь текст кроме жирного заголовка) */
     .ooc-box:hover p {
       text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
       transition: text-shadow 0.3s ease;
+    }
+    
+    /* Отменяем свечение для жирного текста внутри OOC блока */
+    .ooc-box:hover p b {
+      text-shadow: none;
     }
     
     /* Плавный переход для текста */
