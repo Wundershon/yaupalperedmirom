@@ -13,6 +13,21 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Дополнительные стили для белого свечения текста -->
+  <style>
+    /* Белое свечение текста при наведении на скролл-бокс */
+    .col:hover p {
+      text-shadow: 0 0 5px #fff, 
+                   0 0 10px #fff;
+      transition: text-shadow 0.3s ease;
+    }
+    
+    /* Плавный переход для текста */
+    .col p {
+      transition: text-shadow 0.3s ease;
+    }
+  </style>
 </head>
 <body>
 
