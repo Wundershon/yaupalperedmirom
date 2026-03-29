@@ -39,7 +39,7 @@
       transition: text-shadow 0.3s ease;
     }
     
-    /* Стили для левой картинки с рамкой */
+    /* Стили для левой картинки в едином стиле с блоками */
     .left-image {
       position: fixed;
       left: 20px;
@@ -49,19 +49,21 @@
     }
     
     .left-image img {
-      width: 200px;
+      width: 180px;
       height: auto;
-      border: 3px solid #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      border: 2px solid #555;
+      border-radius: 8px;
+      padding: 5px;
+      background: rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
+      cursor: pointer;
     }
     
-    /* Эффект при наведении на картинку */
+    /* Эффект затемнения при наведении как у аватарки */
     .left-image img:hover {
-      border-color: #ff69b4;
-      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
-      transform: scale(1.05);
+      filter: brightness(0.6);
+      border-color: #888;
+      transform: scale(1.02);
     }
     
     /* Адаптация для мобильных устройств */
@@ -77,7 +79,7 @@
 </head>
 <body>
 
-  <!-- 🖼️ Левая картинка с рамкой -->
+  <!-- 🖼️ Левая картинка с рамкой в едином стиле -->
   <div class="left-image">
     <img src="https://i.pinimg.com/1200x/94/5d/0b/945d0b337229f990997efcf40a9ee130.jpg" alt="Left decorative image">
   </div>
