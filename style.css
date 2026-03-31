@@ -1,7 +1,12 @@
+::-webkit-scrollbar { width: 5px; background: transparent; }
+::-webkit-scrollbar-thumb { background: #1c1b1b; }
+
+body { background-image: url('https://a.l3n.co/i/eQZVXK.png'), url('https://c.l3n.co/i/e1Cmqk.png'), linear-gradient(to bottom, #000000, #121111); overflow: hidden; width: 100%; height: 100%; }
+
+.info-box, .ooc-box { display: flex; column-count: 2; width: 400px; height: 350px; border: 30px solid transparent; outline: 1px solid #1c1b1b; position: absolute; margin: auto; z-index: 1; left: 0; right: 0; top: 0; bottom: 190px; box-shadow: 0px 0px 38px #000; background-color: #050505; background-image: url('https://c.l3n.co/i/e1Cmqk.png'); overflow: hidden; }
 
 .ooc-box { display: flex; height: 100px; top: 440px; bottom: 0; column-count: 1; overflow-x: hidden; overflow-y: auto; }
 
-#col, .col { overflow: auto; float: left; display: table-cell; display: inline-block; width: 200px; text-align: justify; line-height: 17px; font-size: 11px; } 
 #col, .col { overflow: auto; float: left; display: table-cell; display: inline-block; width: 200px; text-align: justify; line-height: 17px; font-size: 11px; }
 #col { height: 350px; overflow-x: hidden; overflow-y: auto; }
 .col { margin-left: 20px; width: 260px; height: 350px !Important; }
@@ -10,11 +15,8 @@
 .main-img { float: left; height: 140px; float: left; width: 140px; margin-top: 1px; margin-left: 1px; object-fit: cover; object-position: center; border: 6px solid transparent; outline: 1px solid #1c1b1b; margin-bottom: 12px; display: inline-block; transition: ease all 0.7s; }
 .main-img:hover { opacity: 0.65; }
 
-p { text-align: justify; font-size: 10px; color: #575353; margin: 0; letter-spacing: 1px; line-height: 14.5px; word-spacing: -1px; font-family: 'open sans'; float: right; }
 p { text-align: justify; font-size: 10px; color: #8a8686; margin: 0; letter-spacing: 1px; line-height: 14.5px; word-spacing: -1px; font-family: 'open sans'; float: right; }
 span { font-family: 'open sans'; text-align: justify; color: #575353; margin: 0px; letter-spacing: 1px; line-height: 17.55px !important; word-spacing: -1px; }
-b { color: #383535; text-transform: uppercase; font-size: 10px; font-family: 'faustina'; letter-spacing: 1.5px; word-spacing: -1px; }
-a { color: #797575; text-decoration: 1px solid underline #383535; text-underline-offset: 3px; transition: ease all 0.7s; }
 
 .profile-info { display: block; line-height: 16px; font-size: 9px; word-wrap: break-word; }
 
@@ -22,7 +24,6 @@ a { color: #797575; text-decoration: 1px solid underline #383535; text-underline
 b { color: #383535; text-transform: uppercase; font-size: 9px; font-family: 'faustina'; letter-spacing: 0.5px; word-spacing: -1px; }
 a { color: #797575; text-decoration: none; transition: ease all 0.7s; }
 i { color: #aba9a9; font-family: 'diphylleia'; }
-a:hover { color: #aba9a9; text-decoration-color: transparent; }
 a:hover { color: #aba9a9; }
 
 .white-text { color: #aba9a9; }
@@ -30,7 +31,6 @@ a:hover { color: #aba9a9; }
 
 .info::after { font-style: normal; display: inline-block; content: '*'; padding-right: 0.2vw; padding-left: 0.1vw; color: #797575; }
 
-.redline { width: 400px; height: 600px; border: 2px solid red; position: absolute; margin: auto; z-index: 1; left: 0; right: 0; top: 0; bottom: 0; }
 .redline { width: 400px; height: 600px; border: 2px solid red; position: absolute; margin: auto; z-index: 1; left: 0; right: 0; top: 0; bottom: 0; }
 
 .static-gif { width: 140px; height: auto; border: 6px solid transparent; outline: 1px solid #1c1b1b; margin-top: 10px; display: block; animation: none; }
